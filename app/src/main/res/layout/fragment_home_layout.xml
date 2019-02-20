@@ -4,13 +4,13 @@
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent">
 
         <View
             android:id="@+id/view_status_bar"
             android:layout_width="wrap_content"
-            android:layout_height="0dp" />
+            android:layout_height="0dp"
+            android:background="@color/head_view_color"/>
 
         <ImageView
             android:id="@+id/home_banner"
@@ -77,7 +77,8 @@
                     android:layout_toEndOf="@+id/icon_search"
                     android:background="@null"
                     android:hint="请输入学校或地址"
-                    android:focusable="true"
+                    android:inputType="none"
+                    android:focusable="false"
                     android:focusableInTouchMode="true"
                     android:textSize="@dimen/textSize14" />
             </RelativeLayout>
@@ -98,9 +99,9 @@
             android:layout_width="121dp"
             android:layout_height="22dp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@id/home_banner"
             android:layout_marginStart="34dp"
-            android:layout_marginTop="158dp"
+            android:layout_marginBottom="38dp"
             android:background="@drawable/btn_back_ground"
             android:gravity="center"
             android:text="点我查看"

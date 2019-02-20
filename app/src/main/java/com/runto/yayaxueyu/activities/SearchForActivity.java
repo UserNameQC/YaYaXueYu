@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.jaeger.library.StatusBarUtil;
+import com.runto.controler.utils.CommonUtils;
 import com.runto.yayaxueyu.R;
 import com.runto.yayaxueyu.adapter.HomeRecyclerAdapter;
 import com.runto.yayaxueyu.databinding.ActivitySearchForBinding;
@@ -30,9 +32,11 @@ public class SearchForActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_search_for);
+        StatusBarUtil.setLightMode(this);
         inflater = LayoutInflater.from(this);
         initView();
     }
+
 
     public void initView() {
         searchTagList.add("沃尔德英语");

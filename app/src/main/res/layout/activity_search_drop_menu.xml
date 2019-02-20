@@ -9,6 +9,12 @@
         android:background="@color/back_color_1"
         tools:context=".activities.SearchForActivity">
 
+        <View
+            android:id="@+id/drop_head_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:background="@color/home_address_text_color"/>
+
         <RelativeLayout
             android:id="@+id/search_head_layout"
             android:layout_width="match_parent"
@@ -17,7 +23,8 @@
             android:paddingStart="15dp"
             android:paddingLeft="15dp"
             android:paddingEnd="15dp"
-            android:paddingRight="15dp">
+            android:paddingRight="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/drop_head_view">
 
             <ImageView
                 android:id="@+id/search_back"

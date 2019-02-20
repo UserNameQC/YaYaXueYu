@@ -43,7 +43,7 @@ public class BaseActivity extends FragmentActivity {
     }
 
     protected void setStatusBar() {
-        StatusBarUtil.setColor(this, getResources().getColor(R.color.colorPrimary));
+        StatusBarUtil.setColor(this, 0x00ffffff, 0);
     }
 
     @Override

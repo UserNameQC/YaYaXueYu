@@ -3,6 +3,7 @@ package com.runto.yayaxueyu.activities;
 import android.app.Dialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.jaeger.library.StatusBarUtil;
 import com.runto.controler.utils.DialogUtils;
 import com.runto.controler.utils.Entity;
 import com.runto.yayaxueyu.R;
@@ -24,7 +26,13 @@ public class SchoolDetailsActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_school_dotails);
+        StatusBarUtil.setDarkMode(this);
         initView();
+    }
+
+    @Override
+    protected void setStatusBar() {
+        super.setStatusBar();
     }
 
     public void initView(){

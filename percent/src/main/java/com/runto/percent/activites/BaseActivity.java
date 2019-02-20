@@ -11,4 +11,8 @@ public class BaseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
+    protected void setStatusBar() {
+        //StatusBarUtil.setColor(this, 0xffffff, 80);
+    }
 }
