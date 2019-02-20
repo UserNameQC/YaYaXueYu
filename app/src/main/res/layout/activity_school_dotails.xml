@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:ignore="MissingDefaultResource"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_address_text_color">
+
+        <ImageView
+            android:id="@+id/school_details_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/school_details_banner" />
+
+        <RelativeLayout
+            android:id="@+id/school_heard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp">
+
+            <ImageView
+                android:id="@+id/school_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/school_sharp"
+                android:src="@drawable/collection" />
+
+            <ImageView
+                android:id="@+id/school_sharp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/icon_share" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/school_phone_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:background="@color/home_address_text_color"
+            app:layout_constraintTop_toBottomOf="@+id/school_details_banner">
+
+            <ImageView
+                android:id="@+id/school_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/school_icon" />
+
+            <TextView
+                android:id="@+id/school_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_toEndOf="@+id/school_icon"
+                android:text="瑞思学科英语(高新万达店)"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize15" />
+
+            <ImageView
+                android:id="@+id/school_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_phone" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/school_details_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.51dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/text_color_2"
+            app:layout_constraintTop_toBottomOf="@+id/school_phone_layout" />
+
+        <RelativeLayout
+            android:id="@+id/school_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="20dp"
+            android:background="@color/home_address_text_color"
+            app:layout_constraintTop_toBottomOf="@+id/school_details_line">
+
+            <ImageView
+                android:id="@+id/school_location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/school_location" />
+
+            <RelativeLayout
+                android:id="@+id/school_location_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/school_location_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@+id/school_location_icon">
+
+                <TextView
+                    android:id="@+id/school_location_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="颖秀路1237号万达写字楼J2号2层"
+                    android:singleLine="true"
+                    android:textColor="@color/home_text_color"
+                    android:textSize="@dimen/textSize15" />
+
+                <TextView
+                    android:id="@+id/school_location_dec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/school_location_title"
+                    android:text="距您1.2km"
+                    android:textColor="@color/home_text_color_1"
+                    android:textSize="@dimen/textSize12" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/school_item_btn"
+                android:layout_width="68dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/home_item_btn_ground"
+                android:gravity="center"
+                android:text="查看地图"
+                android:textColor="@color/home_address_text_color"
+                android:textSize="@dimen/textSize14" />
+        </RelativeLayout>
+        
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/back_color_1"
+            app:layout_constraintTop_toBottomOf="@+id/school_location_layout"/>
+
+        <RelativeLayout
+            android:id="@+id/school_details_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/view_line">
+            
+            <TextView
+                android:id="@+id/details_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize16"
+                android:textColor="@color/home_text_color"
+                android:text="学校详情"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/school_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize14"
+                android:layout_below="@+id/details_title"
+                android:layout_marginTop="15dp"
+                android:text="英语主题教学，孩子从小爱上英语。"/>
+
+            <ImageView
+                android:id="@+id/details_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shcool_detais"
+                android:layout_below="@+id/school_notice"
+                android:layout_marginTop="12dp"
+                android:scaleType="fitXY"/>
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

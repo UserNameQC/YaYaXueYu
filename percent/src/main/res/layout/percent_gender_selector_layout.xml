@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/gender_selector_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/drawable_white_back">
+
+        <TextView
+            android:id="@+id/select_type_man"
+            style="@style/Text_Theme"
+            android:text="男" />
+
+
+        <TextView
+            android:id="@+id/select_type_women"
+            style="@style/Text_Theme"
+            android:text="女"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/select_type_cancel"
+        style="@style/Text_Theme"
+        android:text="取消"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/drawable_white_back"
+        app:layout_constraintTop_toBottomOf="@+id/gender_selector_layout"/>
+
+</android.support.constraint.ConstraintLayout>

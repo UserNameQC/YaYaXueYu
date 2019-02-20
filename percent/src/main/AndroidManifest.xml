@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.runto.percent">
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true"
+        android:theme="@style/ColorTranslucentTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activites.PercentMainActivity"/>
+        <activity android:name=".activites.PercentSettingPasswordActivity"/>
+        <activity android:name=".activites.PercentEditActivity"/>
+
+    </application>
+
+</manifest>

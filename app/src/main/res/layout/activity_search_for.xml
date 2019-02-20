@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.SearchForActivity"
+        android:background="@color/back_color_1">
+        <RelativeLayout
+            android:id="@+id/search_head_layout"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/home_address_text_color">
+
+            <ImageView
+                android:id="@+id/search_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/black_back_image"/>
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/home_address"
+                android:layout_toStartOf="@+id/home_location"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/drawable_search_back">
+
+                <ImageView
+                    android:id="@+id/icon_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_search_for"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"/>
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:hint="请输入学校或地址"
+                    android:textSize="@dimen/textSize14"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/icon_search"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize15"
+                android:text="搜索"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/search_history_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/search_head_layout">
+
+            <TextView
+                android:id="@+id/search_history_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize14"
+                android:textColor="@color/text_color_4"
+                android:layout_centerVertical="true"
+                android:text="搜索历史"/>
+
+            <TextView
+                android:id="@+id/search_clear_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize14"
+                android:textColor="@color/text_color_4"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:text="清除历史"
+                android:drawableLeft="@drawable/clear"
+                android:drawablePadding="8dp"/>
+        </RelativeLayout>
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/search_flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:max_select="1"
+            android:padding="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/search_history_layout">
+
+        </com.zhy.view.flowlayout.TagFlowLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

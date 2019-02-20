@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.runto.yayaxueyu"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':processor')
+    implementation 'com.alibaba:arouter-api:1.4.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    //屏幕适配终极方案
+    implementation 'me.jessyan:autosize:1.1.2'
+    implementation project(':httputils')
+    //3d地图
+    //implementation 'com.amap.api:3dmap:6.6.0'
+    //2d地图
+    implementation 'com.amap.api:map2d:5.2.0'
+    //导航
+    implementation 'com.amap.api:navi-3dmap:6.5.0_3dmap6.5.0'
+    //搜索功能
+    implementation 'com.amap.api:search:6.5.0.1'
+    //定位
+    implementation 'com.amap.api:location:4.5.0'
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'org.raphets:roundimageview:1.1.0'
+    implementation project(':percent')
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    //流式布局
+    implementation project(':drop-menu')
+    implementation project(':filter-lib')
+    //底部弹窗效果
+    implementation 'me.shaohui:bottomdialog:1.1.9'
+}

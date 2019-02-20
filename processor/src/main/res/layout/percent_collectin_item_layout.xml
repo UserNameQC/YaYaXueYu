@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp">
+
+    <org.raphets.roundimageview.RoundImageView
+        android:id="@+id/item_image"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/recycker_item_image"
+        android:layout_alignBottom="@+id/item_layout"
+        android:layout_alignTop="@+id/item_layout"
+        app:type="round"/>
+
+    <RelativeLayout
+        android:id="@+id/item_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/item_image">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSize15"
+            android:paddingTop="6dp"
+            android:textColor="@color/home_text_color"
+            android:singleLine="true"
+            android:text="阿斯顿英语(高新万达校区)"/>
+
+        <RelativeLayout
+            android:id="@+id/item_child_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_below="@+id/item_title">
+
+            <ImageView
+                android:id="@+id/item_location_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/school_small_location"/>
+            <TextView
+                android:id="@+id/item_location_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textSize14"
+                android:layout_marginStart="5dp"
+                android:lines="1"
+                android:layout_toEndOf="@+id/item_location_image"
+                android:text="康虹路与颖秀路交叉口北100米路西三楼"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_btn"
+            android:layout_width="68dp"
+            android:layout_height="24dp"
+            android:textSize="@dimen/textSize14"
+            android:text="查看详情"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:layout_below="@+id/item_child_layout"
+            android:textColor="@color/home_address_text_color"
+            android:background="@drawable/home_item_btn_ground"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

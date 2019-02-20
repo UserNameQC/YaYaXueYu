@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="home_bottom_text_color">#96979b</color>
+    <color name="home_bottom_text_selector">#6d61a9</color>
+    <color name="home_address_text_color">#fff</color>
+    <color name="home_text_color">#333333</color>
+    <color name="home_text_color_1">#999999</color>
+</resources>

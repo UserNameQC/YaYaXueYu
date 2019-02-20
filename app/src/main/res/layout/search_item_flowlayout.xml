@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/drawable_white_back"
+    android:id="@+id/flow_text"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:textColor="@color/home_text_color"
+    android:textSize="@dimen/textSize15"
+    android:gravity="center">
+</TextView>

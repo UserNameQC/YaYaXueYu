@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/back_color"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/nick_title_layout"
+            android:layout_width="match_parent"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@color/home_address_text_color"
+            android:layout_height="45dp">
+
+            <TextView
+                android:id="@+id/nick_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="取消"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize17" />
+
+            <TextView
+                android:id="@+id/nick_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="昵称"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize17" />
+
+            <TextView
+                android:id="@+id/nick_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="保存"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize17" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/nick_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="28dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@color/home_address_text_color"
+            app:layout_constraintTop_toBottomOf="@+id/nick_title_layout">
+
+            <EditText
+                android:id="@+id/nick_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/nick_clear"
+                android:background="@null"
+                android:text="七里香"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize16" />
+
+            <ImageView
+                android:id="@+id/nick_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/icon_mine_close" />
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

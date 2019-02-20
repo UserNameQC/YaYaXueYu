@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="home_bottom_text_color">#96979b</color>
+    <color name="home_bottom_text_selector">#6d61a9</color>
+    <color name="home_address_text_color">#fff</color>
+    <color name="home_text_color">#333333</color>
+    <color name="home_text_color_2">#666666</color>
+    <color name="home_text_color_1">#999999</color>
+    <color name="back_color">#f7f7f7</color>
+    <color name="selector_color">#0a79f5</color>
+    <color name="selector_color_1">#e6e6e6</color>
+    <color name="line_color">#d5d5d5</color>
+    <color name="text_color">#cacaca</color>
+    <color name="text_color_1">#6f61a9</color>
+    <color name="text_color_2">#c8c8c8</color>
+    <color name="text_color_3">#4586de</color>
+    <color name="back_color_1">#f1f1f1</color>
+    <color name="text_color_4">#878787</color>
+    <color name="line_color_1">#efefef</color>
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <View
+            android:id="@+id/view_status_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" />
+
+        <ImageView
+            android:id="@+id/home_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner"
+            android:layout_below="@+id/view_status_bar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:layout_below="@+id/view_status_bar">
+
+            <TextView
+                android:id="@+id/home_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="济南"
+                android:textColor="@color/home_address_text_color"
+                android:textSize="@dimen/textSize15"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/home_popu_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_home_popu"
+                android:layout_toEndOf="@+id/home_address"
+                android:layout_marginStart="8dp"/>
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_toStartOf="@+id/home_location"
+                android:layout_toEndOf="@id/home_popu_image"
+                android:background="@drawable/search_back_ground">
+
+                <ImageView
+                    android:id="@+id/icon_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/icon_search_for" />
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toEndOf="@+id/icon_search"
+                    android:background="@null"
+                    android:hint="请输入学校或地址"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textSize="@dimen/textSize14" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:src="@drawable/location_address" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/home_click_btn"
+            android:layout_width="121dp"
+            android:layout_height="22dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="158dp"
+            android:background="@drawable/btn_back_ground"
+            android:gravity="center"
+            android:text="点我查看"
+            android:textColor="@color/home_bottom_text_selector"
+            android:textSize="@dimen/textSize14"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:id="@+id/home_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/home_banner"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:id="@+id/home_view"
+                android:layout_width="4dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/home_bottom_text_selector"
+                android:textSize="@dimen/textSize15" />
+
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/home_view"
+                android:text="周边学校"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize15"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/home_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_title_layout"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="15dp" />
+
+
+    </RelativeLayout>
+</layout>

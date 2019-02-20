@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MapActivity">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/search_head_layout"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@id/home_address"
+                android:layout_toStartOf="@+id/home_location"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/drawable_search_back">
+
+                <ImageView
+                    android:id="@+id/icon_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_search_for"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"/>
+
+                <EditText
+                    android:id="@+id/search_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:hint="请输入学校或地址"
+                    android:textSize="@dimen/textSize14"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/icon_search"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/home_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:src="@drawable/icon_avatar"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/map_back"
+                android:layout_width="54dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="34dp"
+                android:background="@drawable/drawable_right_radius_back">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/white_back_image" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/map_bottom_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/home_address_text_color"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/map_school_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="瑞思英语(高新万达店)"
+                android:textColor="@color/home_text_color"
+                android:textSize="@dimen/textSize16" />
+
+            <TextView
+                android:id="@+id/map_location1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/map_school_name1"
+                android:textColor="@color/home_text_color_2"
+                android:layout_marginTop="10dp"
+                android:text="颖秀路1237号高新万达写字楼J2号2层"
+                android:textSize="@dimen/textSize15"/>
+
+
+            <TextView
+                android:id="@+id/map_click_navigation1"
+                android:layout_width="163dp"
+                android:layout_height="39dp"
+                android:layout_below="@+id/map_location1"
+                android:layout_marginTop="16dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/home_item_btn_ground"
+                android:textSize="@dimen/textSize16"
+                android:textStyle="bold"
+                android:textColor="@color/home_address_text_color"
+                android:text="点我导航"
+                android:gravity="center"/>
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

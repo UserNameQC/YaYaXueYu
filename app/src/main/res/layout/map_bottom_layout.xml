@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/map_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/home_address_text_color"
+        android:padding="15dp" >
+
+        <TextView
+            android:id="@+id/map_school_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="瑞思英语(高新万达店)"
+            android:textColor="@color/home_text_color"
+            android:textSize="@dimen/textSize16" />
+
+        <TextView
+            android:id="@+id/map_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/map_school_name"
+            android:textColor="@color/home_text_color_2"
+            android:layout_marginTop="10dp"
+            android:text="颖秀路1237号高新万达写字楼J2号2层"
+            android:textSize="@dimen/textSize15"/>
+
+        <TextView
+            android:id="@+id/map_school_details"
+            android:layout_width="163dp"
+            android:layout_height="39dp"
+            android:layout_below="@+id/map_location"
+            android:layout_marginTop="16dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/home_item_btn_ground"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold"
+            android:textColor="@color/home_address_text_color"
+            android:text="学校详情"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/map_click_navigation"
+            android:layout_width="163dp"
+            android:layout_height="39dp"
+            android:layout_below="@+id/map_location"
+            android:layout_marginTop="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/home_item_btn_ground"
+            android:textSize="@dimen/textSize16"
+            android:textStyle="bold"
+            android:textColor="@color/home_address_text_color"
+            android:text="点我导航"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

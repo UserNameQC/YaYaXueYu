@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:background="@drawable/drawable_finish_dialog_back">
+
+
+    <TextView
+        android:id="@+id/school_phoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="15606344426"
+        android:textColor="#333333"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#cdcdcd" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp">
+
+        <TextView
+            android:id="@+id/call_number_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center"
+            android:layout_toStartOf="@+id/view"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/call_number_cancel"
+            android:layout_alignTop="@+id/call_number_cancel"
+            android:layout_centerHorizontal="true"
+            android:background="#cdcdcd" />
+
+        <TextView
+            android:id="@+id/call_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/view"
+            android:gravity="center"
+            android:text="拨打"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>
