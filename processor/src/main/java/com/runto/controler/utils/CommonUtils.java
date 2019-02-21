@@ -13,6 +13,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.runto.controler.R;
@@ -197,7 +198,15 @@ public class CommonUtils {
      * @param view
      */
     public static void setViewHeight(Activity activity, View view) {
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
+        //LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) view.getLayoutParams();
+        params.height = CommonUtils.getStatuesBarHeight(activity);
+        view.setLayoutParams(params);
+    }
+
+    public static void setViewHeightCon(Activity activity, View view) {
+        //LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) view.getLayoutParams();
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) view.getLayoutParams();
         params.height = CommonUtils.getStatuesBarHeight(activity);
         view.setLayoutParams(params);
     }

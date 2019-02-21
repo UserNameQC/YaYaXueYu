@@ -37,14 +37,13 @@ public class HomeActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         homeBinding = DataBindingUtil.setContentView(HomeActivity.this, R.layout.activity_home);
-        StatusBarUtil.setTranslucent(this);
         fragmentManager = getSupportFragmentManager();
         initView();
     }
 
     @Override
     protected void setStatusBar() {
-        StatusBarUtil.setTranslucentForImageViewInFragment(this, null);
+        StatusBarUtil.setTranslucentForImageViewInFragment(this, 80, null);
     }
 
     public void initView(){

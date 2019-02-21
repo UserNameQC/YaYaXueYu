@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.runto.controler.utils.CommonUtils;
 import com.runto.controler.utils.Entity;
 import com.runto.yayaxueyu.R;
 import com.runto.yayaxueyu.databinding.FragmentMineLayoutBinding;
@@ -25,6 +26,7 @@ public class MineFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_mine_layout, container, false);
+        CommonUtils.setViewHeight(getActivity(), binding.mineHeadView);
         initMineLayoutEvent();
         return binding.getRoot();
     }

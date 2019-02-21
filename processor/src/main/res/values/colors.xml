@@ -20,4 +20,6 @@
     <color name="back_color_1">#f1f1f1</color>
     <color name="text_color_4">#878787</color>
     <color name="line_color_1">#efefef</color>
+    <color name="head_view_color">#5b55a9</color>
+    <color name="head_view_color_1">#9a88ff</color>
 </resources>

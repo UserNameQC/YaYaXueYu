@@ -6,12 +6,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <View
+            android:id="@+id/mine_head_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/head_view_color_1"/>
+
         <ImageView
             android:id="@+id/personal_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
-            android:src="@drawable/icon_mine_back" />
+            android:src="@drawable/icon_mine_back"
+            android:layout_below="@+id/mine_head_view"/>
 
         <ImageView
             android:id="@+id/personal_avatar"

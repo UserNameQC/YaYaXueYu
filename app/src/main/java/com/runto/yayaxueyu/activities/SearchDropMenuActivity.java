@@ -11,6 +11,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.baiiu.dropdownmenu.DropMenuAdapter;
 import com.baiiu.dropdownmenu.entity.FilterUrl;
 import com.baiiu.filter.interfaces.OnFilterDoneListener;
+import com.jaeger.library.StatusBarUtil;
 import com.runto.controler.adapter.UniversalRecyclerAdapter;
 import com.runto.controler.bean.HomeSchoolBean;
 import com.runto.yayaxueyu.R;
@@ -30,6 +31,7 @@ public class SearchDropMenuActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_search_drop_menu);
+        StatusBarUtil.setLightMode(this);
         initFlowLayoutView();
         initRecyclerView();
         initEvent();

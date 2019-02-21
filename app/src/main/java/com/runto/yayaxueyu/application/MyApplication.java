@@ -5,6 +5,7 @@ import android.app.Application;
 import android.os.Bundle;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.tencent.bugly.crashreport.CrashReport;
 
 import java.util.Stack;
 
@@ -20,6 +21,7 @@ public class MyApplication extends Application {
         myApplication = this;
         initArouter();
         initBackgroundCallBack();
+        CrashReport.initCrashReport(getApplicationContext(), "3c263f2b63", true);
     }
 
     public void initArouter(){

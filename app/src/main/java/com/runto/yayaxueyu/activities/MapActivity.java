@@ -40,6 +40,7 @@ import com.amap.api.navi.AmapNaviType;
 import com.amap.api.navi.AmapPageType;
 import com.amap.api.navi.INaviInfoCallback;
 import com.amap.api.navi.model.AMapNaviLocation;
+import com.jaeger.library.StatusBarUtil;
 import com.runto.controler.utils.Entity;
 import com.runto.yayaxueyu.R;
 import com.runto.yayaxueyu.databinding.ActivityMapBinding;
@@ -77,6 +78,7 @@ public class MapActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_map);
+        StatusBarUtil.setLightMode(this);
         binding.mapView.onCreate(savedInstanceState);
         getAssetsStyle();
         initPermission();
@@ -245,7 +247,7 @@ public class MapActivity extends BaseActivity {
     }
 
     public void initPermission() {
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(this, PERMISSIONS_STORAGE, 1);
             }

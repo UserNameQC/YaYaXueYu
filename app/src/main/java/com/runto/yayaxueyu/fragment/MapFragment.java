@@ -22,6 +22,7 @@ import com.amap.api.maps.AMap;
 import com.amap.api.maps.LocationSource;
 import com.amap.api.maps.UiSettings;
 import com.amap.api.maps.model.MyLocationStyle;
+import com.jaeger.library.StatusBarUtil;
 import com.runto.yayaxueyu.R;
 import com.runto.yayaxueyu.databinding.FragmentMapLayoutBinding;
 
@@ -53,6 +54,7 @@ public class MapFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mapBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_map_layout, container, false);
+        StatusBarUtil.setLightMode(getActivity());
         mapBinding.mapView.onCreate(savedInstanceState);
         initPermission();
         initMapView();

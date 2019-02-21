@@ -70,7 +70,8 @@
         <service android:name="com.amap.api.location.APSService" />
 
         <activity android:name=".activities.WelcomeActivity" />
-        <activity android:name=".activities.SearchForActivity" />
+        <activity android:name=".activities.SearchForActivity"
+            android:launchMode="singleTask"/>
         <activity android:name=".activities.SchoolDetailsActivity" />
         <activity android:name=".activities.MapActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
