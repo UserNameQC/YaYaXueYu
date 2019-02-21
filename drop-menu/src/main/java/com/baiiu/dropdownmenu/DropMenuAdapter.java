@@ -118,6 +118,7 @@ public class DropMenuAdapter implements MenuAdapter {
         age.add("八岁");
         age.add("九岁");
         genderListView.setList(age, -1);
+        genderListView.setBackgroundResource(R.color.home_address_text_color);
         return genderListView;
     }
 
