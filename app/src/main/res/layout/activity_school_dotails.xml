@@ -20,15 +20,15 @@
         <RelativeLayout
             android:id="@+id/school_heard_layout"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="45dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp" >
+            android:layout_marginEnd="20dp">
 
             <ImageView
                 android:id="@+id/school_collection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@+id/school_sharp"
                 android:src="@drawable/collection" />
 
@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
+                android:layout_alignParentBottom="true"
                 android:layout_marginStart="10dp"
                 android:src="@drawable/icon_share" />
 

@@ -26,8 +26,8 @@
             android:layout_height="wrap_content"
             android:baselineAligned="false"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:layout_alignParentBottom="true">
 
             <LinearLayout
@@ -40,8 +40,8 @@
 
                 <ImageView
                     android:id="@+id/home_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/home_selector" />
 
@@ -51,7 +51,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/home_home"
                     android:textColor="@color/selector_btn"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/textSize12" />
             </LinearLayout>
 
             <LinearLayout
@@ -64,8 +64,8 @@
 
                 <ImageView
                     android:id="@+id/home_map_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/home_map_selector" />
 
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/home_map"
                     android:textColor="@color/selector_btn"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/textSize12" />
             </LinearLayout>
 
             <LinearLayout
@@ -88,8 +88,8 @@
 
                 <ImageView
                     android:id="@+id/home_mine_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:contentDescription="@string/app_name"
                     android:src="@drawable/home_mine_selector" />
 
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/home_mine"
                     android:textColor="@color/selector_btn"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/textSize12" />
             </LinearLayout>
         </LinearLayout>
 

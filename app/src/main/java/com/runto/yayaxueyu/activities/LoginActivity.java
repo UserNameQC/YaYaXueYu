@@ -14,6 +14,7 @@ import android.view.inputmethod.EditorInfo;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.jaeger.library.StatusBarUtil;
 import com.runto.controler.utils.CommonUtils;
 import com.runto.controler.utils.DialogUtils;
 import com.runto.yayaxueyu.R;
@@ -32,10 +33,10 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+        StatusBarUtil.setLightMode(this);
         initTypeEdit();
         initLoginLayoutData();
     }
-
 
 
     public void initTypeEdit(){
